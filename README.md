@@ -31,7 +31,7 @@ To generate detailed insights from the review data and identify pain points and 
 pip install -r requirements.txt
 `
 `
-run strea.lit source/data_preprocessing.py
+streamlit run source/data_preprocessing.py
 `
 
 **Ratinga nd Sentiment Reviews Chatbot**

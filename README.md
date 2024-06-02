@@ -29,10 +29,10 @@ run strealit source/data_preprocessing.py
 
 1. Create Vecore database using AstraDB for data storage and similarity meassures
 - Login to AstraDB and create database collectionand your accessing keys as follows:
-    OPENAI_API_KEY= 'xyz'
-    ASTRA_DB_API_ENDPOINT= 'xyz'
-    ASTRA_DB_APPLICATION_TOKEN= 'xyz'
-    ASTRA_DB_KEYSPACE= default_keyspace
+    - OPENAI_API_KEY= 'xyz'
+    - ASTRA_DB_API_ENDPOINT= 'xyz'
+    - ASTRA_DB_APPLICATION_TOKEN= 'xyz'
+    - ASTRA_DB_KEYSPACE= default_keyspace
 
 2. Add this keys to environment by creating file .env
 3. To chat with AI chatbot:

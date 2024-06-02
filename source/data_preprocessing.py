@@ -1,3 +1,5 @@
+# Colab Book: https://colab.research.google.com/drive/1m0Mm83_AXIIkxra18daYHEC_R4MIaQi_#scrollTo=0tupSrBk6UZW
+
 import pandas as pd
 import streamlit as st
 
@@ -90,13 +92,21 @@ lda.fit(dtm)
 
 # Display the top words in each topic
 def display_topics(model, feature_names, no_top_words):
+    topics = []
     for topic_idx, topic in enumerate(model.components_):
-        st.subheader('3. Top 10 Common Theme in Reviews ')
-        st.write(f"Topic {topic_idx}:")
-        st.write(" ".join([feature_names[i] for i in topic.argsort()[:-no_top_words - 1:-1]]))
+        top_words = " ".join([feature_names[i] for i in topic.argsort()[:-no_top_words - 1:-1]])
+        topics.append(f"Topic {topic_idx}: {top_words}")
+    return topics
 
-# Display data
-# st.write(display_topics(lda, vectorizer.get_feature_names_out(), 10))
+# Display data with Streamlit
+st.subheader('3. Top 10 Common Themes in Reviews')
+
+# Get the topics
+topics = display_topics(lda, vectorizer.get_feature_names_out(), 10)
+
+# Write each topic in a separate line
+for topic in topics:
+    st.write(topic)
 
 
 ################################################################################################

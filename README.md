@@ -19,12 +19,10 @@ How to run the project for UI:
 1. Inside the python/ conda environmnet install all required libraries
 `
 pip install -r requirements.txt
-
 `
 `
-run strealit source/data_preprocessing.py
+run strea.lit source/data_preprocessing.py
 `
-
 **Ratinga nd Sentiment Reviews Chatbot**
 
 1. Create Vecore database using AstraDB for data storage and similarity meassures

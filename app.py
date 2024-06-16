@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 load_dotenv()
 
-vstore=ingestdata(None)
+vstore=ingestdata(None)     # "done" in place of run after storing values in vectorDB AstraDB
 chain=generation(vstore)
 
 @app.route("/")

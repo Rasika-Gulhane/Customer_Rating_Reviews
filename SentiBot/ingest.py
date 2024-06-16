@@ -35,7 +35,7 @@ def ingestdata(status):
 if __name__=='__main__':
     vstore,inserted_ids=ingestdata(None)
     print(f"\nInserted {len(inserted_ids)} documents.")
-    results = vstore.similarity_search("can you tell most negatively reviewed product type.")
+    results = vstore.similarity_search("can you tell most negatively reviewed product type.")   #evaluating question
     for res in results:
             print(f"* {res.page_content} [{res.metadata}]")
             

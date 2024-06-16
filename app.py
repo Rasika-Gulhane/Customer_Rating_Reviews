@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 load_dotenv()
 
-vstore=ingestdata("done")
+vstore=ingestdata(None)
 chain=generation(vstore)
 
 @app.route("/")

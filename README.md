@@ -1,4 +1,4 @@
-# Customer Rating and Reviews 
+# NLP based Customer Rating and Reviews Chatbot 
 Presentation:
 https://docs.google.com/presentation/d/1TBFcqwmlkASCjVz30orn6nLID7nBTwu6x9vXs8_Twz8/edit#slide=id.g2e21f1f6657_0_354
 
@@ -22,6 +22,8 @@ To generate detailed insights from the review data and identify pain points and 
 - added Streamlit UI
 - Added Generative AI RAG pipeline for Chatbot that give complete information of data and Sentiment analysis
 
+### Notebook Preparation:
+https://colab.research.google.com/drive/1m0Mm83_AXIIkxra18daYHEC_R4MIaQi_
 
 ### How to run the project for UI:
 

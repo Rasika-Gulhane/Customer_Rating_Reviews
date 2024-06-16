@@ -162,18 +162,18 @@ st.pyplot(fig)
 
 # Incorrect Sentiment w.r.t Rating
 
-# Define a function to check if the rating matches the sentiment
 def check_rating_match(row):
-    if (row['sentiment_score'] > 0 and row['Rating'] >= 4) or (row['sentiment_score'] < 0 and row['Rating'] <= 2):
-        return 'Correct'
-    else:
+    neg_sentiment = row['sentiment']['neg']
+    if (neg_sentiment > 0.4 and row['Rating'] >= 3) or (neg_sentiment < 0.2 and row['Rating'] < 3):
         return 'Incorrect'
+    else:
+        return 'Correct'
 
 # Apply the function to each row
 df['rating_match'] = df.apply(check_rating_match, axis=1)
 
 # Display the result
-print(df[['Text_Review', 'Rating', 'sentiment_score', 'rating_match']].head())
+print(df[['Text_Review', 'Rating', 'sentiment', 'rating_match']])
 
 
 # Filter rows where ratings do not match sentiment
